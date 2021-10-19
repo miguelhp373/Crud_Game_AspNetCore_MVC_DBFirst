@@ -4,12 +4,11 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="title-page">Detalhes</h1>
 
 <div>
-    <h4>Game</h4>
     <hr />
-    <dl class="row">
+    <dl class="row justify-content-center"">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CodigoBarras)
         </dt>
@@ -60,7 +59,11 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Codigo">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="btn-container">
+    <a asp-action="Edit" asp-route-id="@Model.Codigo">Editar</a> 
+    &nbsp;
+    <br />
+    <div class="btn-default">
+        <a asp-action="Index">voltar</a>
+    </div>
 </div>
